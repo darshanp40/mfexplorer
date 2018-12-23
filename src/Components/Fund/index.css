@@ -1,0 +1,37 @@
+.fund-container {
+    display: block;
+    width: 100%;
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 5px 0px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.fund-selector {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+    background: rgba(251, 246, 246, 0.7686274509803922);
+}
+
+.fund-details {
+    display: table-cell;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.field-label {
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.field-details {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.category {
+    text-transform: uppercase;
+}

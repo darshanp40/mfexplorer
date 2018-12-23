@@ -1,0 +1,128 @@
+.mt-checkbox {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.mt-checkbox-input {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.mt-checkbox-label {
+    display: block;
+    padding: 0 18px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.mt-checkbox-label:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 7.5px);
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.54);
+    border-radius: 2px;
+    z-index: 1;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, border-color;
+}
+
+.mt-checkbox-label:after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    width: 5px;
+    height: 10px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 2;
+    transition: border-color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mt-checkbox-input:checked + .mt-checkbox-label:before {
+    background-color: #c635d7;
+    border-color: #c635d7;
+}
+
+.mt-checkbox-input:checked + .mt-checkbox-label:after {
+    border-color: #fff;
+}
+
+.riskometer div {
+    width: 20px;
+    height: 10px;
+    background: #e6e6e6;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.riskometer div:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.riskometer div:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.riskometer div.filled:nth-child(1) {
+    background-color: #38cf00;
+}
+
+.riskometer div.filled:nth-child(2) {
+    background-color: #90cc00;
+}
+.riskometer div.filled:nth-child(3) {
+    background-color: #ffbf00;
+}
+
+.riskometer div.filled:nth-child(4) {
+    background-color: #ff7b00;
+}
+
+.riskometer div.filled:nth-child(5) {
+    background-color: red;
+}
+
+.btn-brand, .btn-brand:hover, .btn-brand:active, .btn-brand:focus {
+    color: #fff;
+    background-color: #c635d7;
+    border-color: #c635d7;
+    outline: none;
+    font-weight: normal;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+
+.header {
+    height: 55px;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgb(38, 38, 38);
+    left: 0;
+    z-index: 100;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+}
