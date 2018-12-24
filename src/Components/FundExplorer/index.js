@@ -18,6 +18,7 @@ class FundExplorer extends Component {
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.compareFunds = this.compareFunds.bind(this);
         this.applyFilters = this.applyFilters.bind(this);
+        this.searchFund = this.searchFund.bind(this);
     }
     filterFunds(filters) {
         let fundsDump = this.state.funds;
@@ -27,6 +28,14 @@ class FundExplorer extends Component {
             }
             return fundsDump;
         })
+        this.setState({
+            filteredFunds: fundsDump
+        })
+    }
+    searchFund(evt) {
+        let searchedText = evt.target.value.toLowerCase();
+        let fundsDump = this.state.funds;
+        fundsDump = fundsDump.filter((data)=>{return data.name.toLowerCase().indexOf(searchedText) > -1});
         this.setState({
             filteredFunds: fundsDump
         })
@@ -117,7 +126,6 @@ class FundExplorer extends Component {
         };
         this.setState(dataObj);
     }
-
     toggleSidebar() {
         this.setState((prevState)=>({
             sidebarClass: (prevState.sidebarClass === 'open' ? '' : 'open')
@@ -131,6 +139,9 @@ class FundExplorer extends Component {
                 <div className="header text-right">
                     <div className="hamburger" onClick={this.toggleSidebar}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><path stroke="#c635d7" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+                    </div>
+                    <div className="search-bar fund-search">
+                        <input onChange={this.searchFund} type="search" className="form-control ds-input" id="search-input" placeholder="Search Fund..." autoComplete="off"/>
                     </div>
                     <button className="btn btn-brand" onClick={this.compareFunds}>Compare ({this.state.fundsToCompare.length})</button>
                 </div>

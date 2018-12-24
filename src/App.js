@@ -9,7 +9,7 @@ const Compare = () => <FundComparison/>;
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="container-fluid">
           <Route path={ROUTES.ROOT} exact component={Home} />
           <Route path={ROUTES.FUND_COMPARISON} exact component={Compare} />

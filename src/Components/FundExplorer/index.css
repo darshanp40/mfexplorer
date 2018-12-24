@@ -1,3 +1,9 @@
 .funds-list {
     margin-top: 65px;
 }
+.fund-search {
+    display: inline-block;
+    margin-right: 10px;
+    max-width: 250px;
+    width: 250px;
+}
