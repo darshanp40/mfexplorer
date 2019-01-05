@@ -1,0 +1,5 @@
+.list-adder .form-control {
+    display: inline-block;
+    width: calc(100% - 48px);
+    margin: 0;
+}

@@ -1,0 +1,27 @@
+.o-hidden {
+    margin-top: 20px;
+    overflow: hidden;
+    max-width: 100%;
+}
+.list-container .list-card {
+    display: inline-block;
+    max-width: 260px;
+    width: 100%;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.list-container {
+    width: calc(100% - 270px);
+    display: inline-block;
+    vertical-align: middle;
+    max-height: calc(100vh - 100px);
+}
+
+.scrollable-container {
+    display: inline-block;
+}
+
+.scrollable-parent {
+    overflow-x: scroll;
+}

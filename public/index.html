@@ -21,6 +21,22 @@
 
 <body>
   <div id="root"></div>
+  <script>
+    function allowDrop(event) {
+      event.preventDefault();
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      var dataId = event.dataTransfer.getData("Data");
+      event.target.closest(".card-container").appendChild(document.getElementById(dataId));
+      
+    }
+    function dragStart(event) {
+      event.dataTransfer.setData("Data", event.target.id);
+    }
+
+  </script>
 </body>
 
 </html>
